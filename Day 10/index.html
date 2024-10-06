@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+
+  <div class="header">
+    <nav class="navbar">
+      <ul>
+        <li>Home</li>
+        <li class="secondli">About</li>
+      </ul>
+    </nav>
+
+  </div>
+
+
+    <section class="main">
+      
+    <div class="card" id="card1">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4 class="name">John Doe</h4>
+          <p id='info' class="info">Architect & Engineer</p>
+          <button id="changeme">Change me</button>
+        </div>
+      </div> 
+
+      <div class="card" id="card2">
+        <img class="img2" src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4 id="name">John Doe</h4>
+          <p id="info">Architect & Engineer</p>
+          <button id="change">Click me</button>
+        </div>
+      </div> 
+
+      <div>
+        <input type="text" id="myInput" placeholder="Type something..." height="50px">
+        <br> <br>
+      <p id="myP">The input text will be displayed here</p>
+      </div>
+
+      <div>
+        <form id="myForm">
+            <label for="myInput">Enter some text:</label>
+            <input type="text" id="myInput" name="myInput">
+            <button type="submit">Submit</button>
+        </form>
+      </div>
+
+    </section>
+
+
+
+<script src="index.js"></script>    
+</body>
+</html>

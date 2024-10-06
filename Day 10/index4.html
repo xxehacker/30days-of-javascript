@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Event Delegation</title>
+</head>
+<body>
+  <button id="addItem">Add Item</button>
+  <ul id="parentList">
+    <!-- Dynamically added list items will appear here -->
+  </ul>
+
+  <script>
+    // Event delegation: listen for clicks on list items within parentList
+    document.getElementById('parentList').addEventListener('click', function(event) {
+      // Check if the clicked element is an li
+      if (event.target.tagName === 'LI') {
+        console.log('Clicked item text:', event.target.textContent);
+      }
+    });
+
+    // Add click event to the "Add Item" button to dynamically add list items
+    document.getElementById('addItem').addEventListener('click', function() {
+      const parentList = document.getElementById('parentList');
+      const newItem = document.createElement('li');
+      newItem.textContent = `Item ${parentList.children.length + 1}`;
+      parentList.appendChild(newItem);
+    });
+  </script>
+</body>
+</html>

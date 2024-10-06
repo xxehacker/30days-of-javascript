@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Delegation Example</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <script>
+    // Add event listener to the parent element (the ul)
+    document.getElementById('myList').addEventListener('click', function(event) {
+      // Check if the clicked element is a list item (li)
+      if (event.target.tagName === 'LI') {
+        console.log(event.target.textContent);
+      }
+    });
+  </script>
+</body>
+</html>
